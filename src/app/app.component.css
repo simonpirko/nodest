@@ -1,0 +1,17 @@
+li {
+    list-style: none;
+    border: #7bff00 double;
+    border-radius: 5px;
+    padding: 25px 160px;
+    margin: 15px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.closer {
+    position: relative;
+    top: -20px;
+    left: 160px;
+}

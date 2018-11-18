@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'nodest';
+
+  arr = [];
+
+  add(a) {
+    if (a !== null && a !== undefined && a !== '') {
+      this.arr = this.arr.concat(a);
+    } else {
+      alert('Пустое значение!');
+    }
+  }
+
+  delete(a) {
+    this.arr.splice(a, 1);
+  }
 }
