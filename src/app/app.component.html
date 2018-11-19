@@ -6,7 +6,7 @@
   <button class="btn" (click)="add(input.value)">Добавить</button>
   <div class="row" style="margin-top: 10px;">
     <ul>
-      <li *ngFor="let item of arr ;let a=index">
+      <li *ngFor="let item of arr; let a=index">
         <div style="cursor: default" (click)="delete(a)" class="closer">
           X
         </div>
