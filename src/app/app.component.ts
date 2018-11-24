@@ -10,14 +10,18 @@ export class AppComponent {
   arr = [];
 
   add(a) {
-    if (a !== null && a !== undefined && a !== '') {
+    if (a !== '') {
       this.arr = this.arr.concat(a);
     } else {
-      alert('Пустое значение!');
+      alert('Empty field!');
     }
   }
 
   delete(a) {
     this.arr.splice(a, 1);
+  }
+
+  fet() {
+    alert('S');
   }
 }
