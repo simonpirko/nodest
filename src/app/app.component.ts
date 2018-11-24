@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   arr = [];
+  isEmptyField = false;
 
   add(a) {
     if (a !== '') {
       this.arr = this.arr.concat(a);
+      this.isEmptyField = false;
     } else {
-      alert('Empty field!');
+      this.isEmptyField = true;
     }
   }
 

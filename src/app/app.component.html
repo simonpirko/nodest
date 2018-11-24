@@ -1,9 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container" style="text-align:center">
   <div class="form-group">
-    <input style="margin: auto; max-width: 300px;" class="form-control" #input type="text">
+    <input style="margin: 10px auto; max-width: 300px;" class="form-control" #input type="text">
   </div>
   <button class="btn" (click)="add(input.value)">Добавить</button>
+  <br>
+  <div *ngIf="isEmptyField">
+    <p class="btn" style="color: red;cursor: unset; border: 1px solid red;margin: 10px auto;">
+      Empty field! Please, enter the
+      real name!</p>
+  </div>
   <div class="row" style="margin-top: 10px;">
     <ul>
       <li *ngFor="let item of arr; let a=index">
