@@ -4,11 +4,10 @@
     <input style="margin: auto; max-width: 300px;" class="form-control" #input type="text">
   </div>
   <button class="btn" (click)="add(input.value)">Добавить</button>
-  <button (click)="fet()"></button>
   <div class="row" style="margin-top: 10px;">
     <ul>
       <li *ngFor="let item of arr; let a=index">
-        <div style="cursor: default" (click)="delete(a)" class="closer">
+        <div style="cursor: default" (click)="removeElement(a)" class="closer">
           X
         </div>
         <div>

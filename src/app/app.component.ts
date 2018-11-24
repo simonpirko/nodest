@@ -17,11 +17,7 @@ export class AppComponent {
     }
   }
 
-  delete(a) {
+  removeElement(a) {
     this.arr.splice(a, 1);
-  }
-
-  fet() {
-    alert('S');
   }
 }
