@@ -1,25 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container" style="text-align:center">
-  <div class="form-group">
-    <input style="margin: 10px auto; max-width: 300px;" class="form-control" #input type="text">
-  </div>
-  <button class="btn" (click)="add(input.value)">Добавить</button>
-  <br>
-  <div *ngIf="isEmptyField">
-    <p class="btn" style="color: red;cursor: unset; border: 1px solid red;margin: 10px auto;">
-      Empty field! Please, enter the
-      real name!</p>
-  </div>
-  <div class="row" style="margin-top: 10px;">
-    <ul>
-      <li *ngFor="let item of arr; let a=index">
-        <div style="cursor: default" (click)="removeElement(a)" class="closer">
-          X
-        </div>
-        <div>
-          {{item}}
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <a class="navbar-brand" routerLink="/">Nodest</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/new" routerLinkActive="active">New Client</a>
       </li>
     </ul>
   </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>

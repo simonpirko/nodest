@@ -1,0 +1,14 @@
+<div *ngIf="success" class="alert alert-success mt-3 w-25 mx-auto rounded-0 border-0" role="alert">
+  Success!
+</div>
+<div class="row">
+  <div class="col-lg-3" *ngFor="let item of asp;let i = index">
+    <div class="card mt-3 rounded-0">
+      <div class="card-body">
+        <h5 class="card-title">{{item.name}}</h5>
+        <p class="card-text">{{item.title}}</p>
+        <button class="btn btn-sm btn-outline-danger">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
