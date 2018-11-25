@@ -13,14 +13,17 @@ export class CardComponent implements OnInit {
 
   constructor(private router: ActivatedRoute) {
     this.success = false;
+    this.asp = AppComponent.arr;
   }
 
   ngOnInit() {
-    this.asp = AppComponent.arr;
     this.success = this.router.snapshot.paramMap.get('success');
     setTimeout(function() {
       this.success = false;
     }.bind(this), 2000);
   }
 
+  removeElement(id) {
+    AppComponent.arr.splice(id, 1);
+  }
 }
