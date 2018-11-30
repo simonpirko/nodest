@@ -5,11 +5,11 @@ import {RouterModule, Routes} from '@angular/router';
 import {AppComponent} from './app.component';
 import {NewComponent} from './new/new.component';
 import {CardComponent} from './card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: '', component: CardComponent},
-  {path: 'new', component: NewComponent},
-  {path: ':success', component: CardComponent}
+  {path: 'new', component: NewComponent}
 ];
 
 @NgModule({
@@ -20,6 +20,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       {enableTracing: true}

@@ -1,6 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {AppComponent} from '../app.component';
-import {Router} from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {CardComponent} from '../card/card.component';
+
+export interface User {
+  name: string;
+  title: string;
+}
 
 @Component({
   selector: 'app-new',
@@ -10,22 +15,19 @@ import {Router} from '@angular/router';
 export class NewComponent implements OnInit {
   isNullNameOrTitle;
   isSuccess;
+  newJs;
 
-  constructor(private router: Router) {
+  constructor(private http: HttpClient) {
     this.isNullNameOrTitle = false;
     this.isSuccess = false;
+    this.newJs = {};
   }
 
   ngOnInit() {
   }
 
-  add(name, title) {
-    if (name !== '' && title !== '') {
-      AppComponent.arr = AppComponent.arr.concat({name, title});
-      this.isSuccess = true;
-      this.router.navigate(['/', 'success']);
-    } else {
-      this.isNullNameOrTitle = true;
-    }
+  add(name, title): void {
+    const a = {name: name, title: title};
+    CardComponent.asp = CardComponent.asp.concat(a);
   }
 }

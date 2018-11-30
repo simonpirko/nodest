@@ -1,14 +1,74 @@
-<div *ngIf="success" class="alert alert-success mt-3 w-25 mx-auto rounded-0 border-0" role="alert">
-  Success!
+<!--<div *ngIf="asp==0" class="w-50 mt-5 mx-auto">-->
+<!--<h1 class="text-center font-weight-light">Empty page!</h1>-->
+<!--</div>-->
+<!--<div class="row">-->
+<!--<div *ngFor="let item of tir;let i = index" class="col-lg-3">-->
+<!--<div class="card mt-3 mb-3 rounded-0">-->
+<!--<div class="card-body">-->
+<!--<h5 class="card-title">{{item.name}}</h5>-->
+<!--<p class="card-text">{{item.title}}</p>-->
+<!--<button (click)="removeElement(i)" class="btn btn-sm btn-outline-danger">Remove</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div>
+  <p>INFO</p>
+  <p>{{hod}}</p>
+  <p>AI{{countAi}}</p>
+  <p>User{{countU}}</p>
+  <button (click)="start()">Reset</button>
 </div>
-<div class="row">
-  <div class="col-lg-3" *ngFor="let item of asp;let i = index">
-    <div class="card mt-3 rounded-0">
-      <div class="card-body">
-        <h5 class="card-title">{{item.name}}</h5>
-        <p class="card-text">{{item.title}}</p>
-        <button (click)="removeElement(i)" class="btn btn-sm btn-outline-danger">Remove</button>
-      </div>
+<div *ngIf="gameSt == 1" class="table mt-5 mx-auto">
+  <div class="row">
+    <div [id]="0" #index0 (click)="swap(index0.id)" class="cell1">
+      <p *ngIf="datas[0].value === 1">U</p>
+      <p *ngIf="datas[0].value === 2">A</p>
+      <p *ngIf="datas[0].value === 0">-</p>
+    </div>
+    <div [id]="1" #index1 (click)="swap(index1.id)" class="cell2">
+      <p *ngIf="datas[1].value === 1">U</p>
+      <p *ngIf="datas[1].value === 2">A</p>
+      <p *ngIf="datas[1].value === 0">-</p>
+    </div>
+    <div [id]="2" #index2 (click)="swap(index2.id)" class="cell3">
+      <p *ngIf="datas[2].value === 1">U</p>
+      <p *ngIf="datas[2].value === 2">A</p>
+      <p *ngIf="datas[2].value === 0">-</p>
+    </div>
+  </div>
+  <div class="row">
+    <div [id]="3" #index3 (click)="swap(index3.id)" class="cell1">
+      <p *ngIf="datas[3].value === 1">U</p>
+      <p *ngIf="datas[3].value === 2">A</p>
+      <p *ngIf="datas[3].value === 0">-</p>
+    </div>
+    <div [id]="4" #index4 (click)="swap(index4.id)" class="cell2">
+      <p *ngIf="datas[4].value === 1">U</p>
+      <p *ngIf="datas[4].value === 2">A</p>
+      <p *ngIf="datas[4].value === 0">-</p>
+    </div>
+    <div [id]="5" #index5 (click)="swap(index5.id)" class="cell3">
+      <p *ngIf="datas[5].value === 1">U</p>
+      <p *ngIf="datas[5].value === 2">A</p>
+      <p *ngIf="datas[5].value === 0">-</p>
+    </div>
+  </div>
+  <div class="row">
+    <div [id]="6" #index6 (click)="swap(index6.id)" class="cell1">
+      <p *ngIf="datas[6].value === 1">U</p>
+      <p *ngIf="datas[6].value === 2">A</p>
+      <p *ngIf="datas[6].value === 0">-</p>
+    </div>
+    <div [id]="7" #index7 (click)="swap(index7.id)" class="cell2">
+      <p *ngIf="datas[7].value === 1">U</p>
+      <p *ngIf="datas[7].value === 2">A</p>
+      <p *ngIf="datas[7].value === 0">-</p>
+    </div>
+    <div [id]="8" #index8 (click)="swap(index8.id)" class="cell3">
+      <p *ngIf="datas[8].value === 1">U</p>
+      <p *ngIf="datas[8].value === 2">A</p>
+      <p *ngIf="datas[8].value === 0">-</p>
     </div>
   </div>
 </div>

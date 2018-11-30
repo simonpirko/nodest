@@ -1,4 +1,7 @@
-<form (submit)="false" class="w-50 mt-5 mx-auto">
+<div *ngIf="isSuccess" class="alert alert-success w-50 mt-5 mx-auto" role="alert">
+  Success! Go to <a class="text-success" routerLink="/">home page!</a>
+</div>
+<form (submit)="false" *ngIf="!isSuccess" class="w-50 mt-5 mx-auto">
   <div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
     <input #name type="text" class="form-control form-control-sm" id="exampleFormControlInput1">
@@ -8,6 +11,7 @@
     <textarea #title class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <button type="button" (click)="add(name.value, title.value)" class="btn btn-sm btn-outline-success">Submit</button>
+  <!--<button type="button" (click)="addN()" class="btn btn-sm btn-outline-success">Submit</button>-->
   <div *ngIf="isNullNameOrTitle" class="alert alert-warning mt-3" role="alert">
     Please, enter your name or title!
   </div>
